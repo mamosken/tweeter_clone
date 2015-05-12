@@ -1,0 +1,28 @@
+<div style="text-align:justified;">
+	<%= form_for @user do |f| %>
+	<div>
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	</div>
+	<div>
+	<%= f.label :fname, "First Name" %>
+	<%= f.text_field :fname %>
+	</div>
+	<div>
+	<%= f.label :lname, "Last Name" %>
+	<%= f.text_field :lname %>
+	</div>
+	<div>
+	<%= f.label :email %>
+	<%= f.email_field :email %>
+	</div>
+
+	<% unless current_user %>
+	<%= render partial:'password', locals: {f: f} %>
+	<% end %>
+
+	<div>
+	<%= f.submit "Cool"%>
+	</div>
+	<% end %>
+</div>

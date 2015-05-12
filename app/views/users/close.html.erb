@@ -1,0 +1,12 @@
+<h1>Delete Account</h1>
+<p>Warning! You are about to delete you account</p>
+<h3>Confirm your password bellor</h3>
+<% form_for current_user do |f| %>
+<div>
+<%= f.label :password %>
+<%= f.password_field :password %>
+</div>
+<div>
+	<%= f.submit "Close my Account. :( " %>
+</div>
+<% end %>

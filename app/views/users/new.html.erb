@@ -1,0 +1,7 @@
+<h1>Sign up below!</h1>
+<% if @user.errors.any? %>
+	<% @user.errors.full_messages.each do |error|%>
+	<p><%=error%></p>
+	<% end %>
+<% end %>
+<%=render 'form' %>

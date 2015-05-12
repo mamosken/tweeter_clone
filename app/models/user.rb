@@ -15,3 +15,4 @@ class User < ActiveRecord::Base
     	User.where("username = lower(?)", username).first
     end
 end
+

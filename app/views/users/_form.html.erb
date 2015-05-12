@@ -1,6 +1,6 @@
 <div style="text-align:justified;">
-	<%= form_for @user do |f| %>
-	<div>
+	<%= form_for @user , :html => { :multipart => true } do |f| %>
+ 	<div>
 	<%= f.label :username %>
 	<%= f.text_field :username %>
 	</div>
@@ -20,7 +20,9 @@
 	<% unless current_user %>
 	<%= render partial:'password', locals: {f: f} %>
 	<% end %>
-
+	<div>
+	<%= f.file_field :image %>
+	</div>
 	<div>
 	<%= f.submit "Cool"%>
 	</div>

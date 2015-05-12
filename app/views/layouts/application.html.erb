@@ -25,8 +25,12 @@
 	</nav>
 </header>
 	<main>
+	<div>
 		<%=flash [:notice] if flash[:notice]%>
+	</div>
+	<div>
 		<%=flash [:alert] if flash[:alert]%>
+	</div>
 	<%= yield %>
 	</main>
 </body>

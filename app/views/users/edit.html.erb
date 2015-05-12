@@ -1,4 +1,12 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
-<%=render 'form' %> 
-<%= link_to 'close account', close_profile_path %>
+
+
+<h1>Editing profile</h1>
+<%= render 'form' %>
+
+<p>
+	<%= link_to 'change password', edit_password_path %>
+</p>
+
+<p>
+	<%= link_to 'close account', close_profile_path %>
+</p>
